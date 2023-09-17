@@ -6,7 +6,7 @@ import Login from '../components/landingPage/Login';
 export default function LandingPage(props) {
   return (
     <div className="h-screen max-h-min flex flex-col ">
-      <div className="body lg:flex px-16 w-full lg:h-5/6 ">
+      <div className="body lg:flex lg:px-16 w-full lg:h-5/6 ">
         <img
           src={Vector}
           alt="Graphics"
