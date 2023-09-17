@@ -8,6 +8,7 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Image,
 } from '@nextui-org/react';
 
 import logo from '../../assets/img/landingPage/logo.png';
@@ -54,7 +55,7 @@ export default function Navbars() {
       isBordered
       shouldHideOnScroll
       onMenuOpenChange={setIsMenuOpen}
-      className="lg:bg-white lg:w-screen lg:h-14 shadow-sm lg:px-16 lg:py-3 flex justify-items-center items-center  w-full overflow-hidden "
+      className="lg:bg-white  lg:h-14 shadow-sm lg:px-16 lg:py-4 flex justify-items-center items-center  w-full overflow-hidden "
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -63,8 +64,13 @@ export default function Navbars() {
         />
         <NavbarBrand>
           {/* <AcmeLogo /> */}
+          <Image
+            src={logo}
+            alt="logo"
+            className="lg:h-10 lg:pr-3 h-10 pr-4 pl-2 mt-2"
+          />
           <Link to="/">
-            <p className="font-bold text-inherit">ACME</p>
+            <p className="font-bold text-inherit">Health Management </p>
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -98,21 +104,21 @@ export default function Navbars() {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        <NavbarItem>
+        <NavbarMenuItem>
           <Link to="/" color="foreground" href="#">
             Home
           </Link>
-        </NavbarItem>
-        <NavbarItem>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
           <Link to="/about" aria-current="page">
             About us
           </Link>
-        </NavbarItem>
-        <NavbarItem>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
           <Link color="foreground" to="/contact">
             Contact us
           </Link>
-        </NavbarItem>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

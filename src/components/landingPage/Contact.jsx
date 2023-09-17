@@ -15,10 +15,10 @@ const Contact = (props) => {
     setLoading(true);
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAIL_SERVICE_ID,
-        process.env.REACT_APP_EMAIL_SERVICE_TEMPLATE,
+        import.meta.env.REACT_APP_EMAIL_SERVICE_ID,
+        import.meta.env.REACT_APP_EMAIL_SERVICE_TEMPLATE,
         form.current,
-        process.env.REACT_APP_EMAIL_SERVICE_PUBLIC_KEY
+        import.meta.env.REACT_APP_EMAIL_SERVICE_PUBLIC_KEY
       )
       .then((res) => {
         console.log('email sent', res);
