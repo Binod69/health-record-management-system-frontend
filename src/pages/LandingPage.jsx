@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import Vector from '../assets/img/landingPage/vector.svg';
 import Login from '../components/landingPage/Login';
 // import Footer from '../components/landingPage/Footer';
@@ -25,3 +25,8 @@ export default function LandingPage(props) {
     </div>
   );
 }
+
+LandingPage.propTypes = {
+  setToastShow: PropTypes.func, // Adjust the prop type as needed
+  settoastCondition: PropTypes.func, // Adjust the prop type as needed
+};
